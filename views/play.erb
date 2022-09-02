@@ -1,0 +1,28 @@
+<section style="background-color; height:100vh">
+<div style="color:red;text-align:center;">
+<h1><%= @player_name %> vs. Computer</h1>
+</div>
+
+<% if @player_pick %>
+<div style="color:blue;text-align:center;">
+  <%= @player_name %> played <%= @player_pick %><br>
+  Computer played <%= @computer_pick %><br>
+</div>
+
+<div style="color:lime;text-align:center;">
+<hr style = "width: 100%;border: 0 none;" />
+  Result: You <%= @result %>
+</div>
+<% end %>
+
+<div style="text-align:center;">
+<hr style = "width: 100%;border: 0 none;" />
+<form action="/selection" method="post">
+  <input type="radio" name="selection" value="Rock">Rock</input>
+  <input type="radio" name="selection" value="Paper">Paper</input>
+  <input type="radio" name="selection" value="Scissors">Scissors</input>
+  <hr style = "width: 100%;border: 0 none;" />
+  <input type="submit" value="Play">
+</form>
+</div>
+</section>
